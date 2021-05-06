@@ -5,7 +5,8 @@ Uma empresa fundada na cidade de Pallet te contratou para desenvolver uma plataf
 ## Features
 - Cada pessoa que entrar na plataforma só poderá ter acesso às informações caso ela tenha um usuário cadastrado no sistema.
 - O usuário tem a possibilidade de acesso a todos os pokémons, podendo adicioná-los à lista de posses.
-- O usuário pode visualizar as posses de outros usuários pesquisando por seu nome.
+- O usuário pode visualizar os pokémons que possui.
+- O usuário pode visualizar as posses de outro usuário pesquisando por seu nome.
 
 
 ## Obrigatório
