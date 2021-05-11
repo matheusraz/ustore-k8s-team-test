@@ -4,7 +4,6 @@ import express, { Express } from 'express';
 class Application {
     express: Express;
 
-
     constructor() {
       this.express = express();
       this.middlewares();

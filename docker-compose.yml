@@ -15,16 +15,18 @@ services:
     depends_on:
       - db
     
-      db:
-        image: mysql:5.7
-        restart: always
-        environment:
-          POSTGRES_USER: ${DATABASE_USER}
-          POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-          POSTGRES_DB: ${DATABASE_DB}
-        ports:
-          - '${DATABASE_PORT}:5432'
-        volumes:
-          - ustore_challenge_db:/var/lib/mysql
+  db:
+    container_name: ${DATABASE_NAME}-db
+    image: mysql:5.7
+    restart: always
+    environment:
+      DATABASE_USER: ${DATABASE_USER}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_DB: ${DATABASE_DB}
+      MYSQL_ROOT_PASSWORD: mysqlrootpassword@123@
+    ports:
+      - '${DATABASE_PORT}:5432'
     volumes:
-      ustore_challenge_db:
+      - ustoredb:/var/lib/mysql
+volumes:
+  ustoredb:
