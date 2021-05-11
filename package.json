@@ -6,6 +6,13 @@
   "repository": "https://github.com/matheusraz/ustore-k8s-team-test.git",
   "author": "Giovaniavs <gavs2@cin.ufpe.br>",
   "license": "MIT",
+  "scripts": {
+    "migration": "yarn ts-node ./node_modules/typeorm/cli.js migration:run",
+    "undo-migration": "yarn ts-node ./node_modules/typeorm/cli.js migration:revert",
+    "generate": "yarn ts-node ./node_modules/typeorm/cli.js migration:generate -n",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules src/server.ts",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js"
+ },
   "dependencies": {
     "express": "^4.17.1",
     "reflect-metadata": "^0.1.13",
